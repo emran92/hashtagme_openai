@@ -14,12 +14,12 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   openai_client: ^0.0.4
-  flutter_dotenv: ^5.0.2
   font_awesome_flutter: ^10.3.0
   google_fonts: ^3.0.1
   chat_gpt_sdk: ^1.0.2+1
   fluttertoast: ^8.1.2
   url_launcher: ^6.1.7
+  firebase_core: ^2.4.1
 
 dev_dependencies:
   flutter_test:
@@ -29,6 +29,3 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-
-assets:
-  - .env

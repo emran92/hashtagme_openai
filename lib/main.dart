@@ -5,14 +5,15 @@ import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+const apiKey = 'YOUR_API_KEY';
+
 void main() async {
-  await dotenv.load(fileName: ".env");
+  // await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -61,9 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     fToast = FToast();
     fToast!.init(context);
-    chatGPT = ChatGPT.instance.builder(
-      dotenv.env['APIKEY']!,
-    );
+    chatGPT = ChatGPT.instance.builder(apiKey);
     _selectedSocialMedia = _socialMediaList.first;
     _selectedNumberOfHashtag = _numberOfHashtagsList.first;
     super.initState();
@@ -451,7 +450,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                 color: Colors.black54,
                               ))),
                       onPressed: () async {
-                        final _url = Uri.parse('https://github.com/emran92/hashtagme_openai');
+                        final _url = Uri.parse(
+                            'https://github.com/emran92/hashtagme_openai');
                         if (!await launchUrl(_url)) {
                           throw 'Could not launch $_url';
                         }

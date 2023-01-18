@@ -12,6 +12,6 @@ This project uses the [OpenAI GPT-3 API](https://openai.com/api/) to constructs 
 
 * After cloning the repo, Create .env file inside assets directory. 
 * Go to [OpenAI](https://beta.openai.com/account/api-keys) to make an account and copy your API key.
-* Put the api key in .env file as APIKEY = your_api_key
+* Put the api key the main.dart file's apiKey const value.
 
 Then, run the application with `flutter run`.
