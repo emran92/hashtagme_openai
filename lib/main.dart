@@ -208,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 4,
                         ),
                         Text(
-                          'Copy and paste your text',
+                          'Copy and paste your text (or type something)',
                           style: Theme.of(context)
                               .textTheme
                               .headlineSmall!
@@ -402,10 +402,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                       child: Container(
                                         padding: EdgeInsets.all(15),
                                         decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          color: Colors.white,
-                                        ),
+                                            borderRadius:
+                                                BorderRadius.circular(12),
+                                            border: Border.all(
+                                                color: Colors.black54)),
                                         child: Text(
                                           "$_generatedText",
                                           style: Theme.of(context)
@@ -451,7 +451,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 color: Colors.black54,
                               ))),
                       onPressed: () async {
-                        final _url = Uri.parse('uri');
+                        final _url = Uri.parse('https://github.com/emran92/hashtagme_openai');
                         if (!await launchUrl(_url)) {
                           throw 'Could not launch $_url';
                         }
