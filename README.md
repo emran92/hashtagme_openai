@@ -2,7 +2,7 @@
 Generate hashtags for your text. Powered by OpenAI and Flutter
 
 
-[![HashtagMe](screen.png)]
+![HashtagMe](screen.png)
 
 ## How it works
 
